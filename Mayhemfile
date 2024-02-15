@@ -1,0 +1,20 @@
+# Mayhem by https://forallsecure.com
+# Mayhemfile: configuration file for testing your target with Mayhem
+# Format: YAML 1.1
+
+# Project name that the target belongs to
+project: saulius/podman-test-build
+
+# Target name (should be unique within the project)
+target: a-out
+
+# Base image to run the binary in.
+image: $MAYHEM_DOCKER_REGISTRY/forallsecure/debian-buster:latest
+
+# Turns on extra test case processing (completing a run will take longer)
+advanced_triage: false
+
+# List of commands used to test the target
+cmds:
+  - cmd: /a.out
+    env: {}

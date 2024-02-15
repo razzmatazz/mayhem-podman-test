@@ -1,6 +1,11 @@
 .PHONY: build
 build:
-	podman build --platform linux/amd64 -t sm-podman-crash-test .
+	podman build -t docker.io/sauliusfas/sm-podman-crash-test .
+
+.PHONY: push
+push:
+	podman push docker.io/sauliusfas/sm-podman-crash-test:latest
 
 .PHONY: run
-	podman run --platform linux/amd64 -it --rm sm-podman-crash-test
+run:
+	podman run -it --rm docker.io/sauliusfas/sm-podman-crash-test
