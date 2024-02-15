@@ -1,0 +1,6 @@
+image: docker.io/sauliusfas/sm-podman-crash-test-amd64:latest
+duration: 90
+project: saulius/podman-crash-test-amd64
+target: a-out
+cmds:
+  - cmd: /a.out
